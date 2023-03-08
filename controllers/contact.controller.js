@@ -37,6 +37,7 @@ exports.fetchContact = async (req, res) => {
                 const { status, statusText } = await contactService.updateContact(contact.id, contact);
                 if (status == 200) {
                     message = 'DFS Booking Zoom Link found, so customField value is updated with TEST Successfully';
+                    // if there are many custom fields with 'DFS Booking Zoom Link' im updating first one.
                     return res.status(status).send({data: contact, message: message});
                 } else {
                     return res.status(status).send({data: contact, message: statusText});
@@ -44,7 +45,7 @@ exports.fetchContact = async (req, res) => {
             }
             
             // not updation so, returning the actual contact
-            return res.status(200).send({data: contact, message: message});;
+            return res.status(200).send({data: contact, message: message});
         }
     } catch(err) {
         console.log(err.message);

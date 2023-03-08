@@ -3,7 +3,7 @@ const serverConfig = require('./server.config');
 
 const app = express(); // Initialize express instance
 
-// intialize the route/s
+// intialize the route
 require('./routes/contact.routes')(app);
 
 console.clear();
