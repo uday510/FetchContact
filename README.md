@@ -28,4 +28,4 @@ npm start
 ```
 
 ## Rest endpoints
-#### localhost:4000/api/v1/contacts
+#### [GET] localhost:4000/api/v1/contacts 
